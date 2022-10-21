@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "853135729772",
+    "firebase_url": "https://legalaid-2104d-default-rtdb.firebaseio.com",
+    "project_id": "legalaid-2104d",
+    "storage_bucket": "legalaid-2104d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853135729772:android:ab72a1fb2a7c8e89b7a449",
+        "android_client_info": {
+          "package_name": "com.example.testapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853135729772-rrq3bg91ff9rfin50k3djho590pdf0po.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.testapp",
+            "certificate_hash": "25fd5592bb41fdb8fe0bb13861aceba1426b493a"
+          }
+        },
+        {
+          "client_id": "853135729772-6d7cfikc79au4409pcin1nopds59mn3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4pnJM4C9vzfxBWr-34cCAYZdRRl18SLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853135729772-6d7cfikc79au4409pcin1nopds59mn3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
