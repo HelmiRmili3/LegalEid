@@ -18,7 +18,7 @@ class _AppointementsState extends State<Appointements> {
   @override
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> appointements = [];
-    _fetch() async {
+    fetch() async {
       final uid = FirebaseAuth.instance.currentUser!.uid;
       await FirebaseFirestore.instance
           .collection('data')
@@ -38,7 +38,7 @@ class _AppointementsState extends State<Appointements> {
         title: const Text('Appointements'),
       ),
       body: FutureBuilder(
-        future: _fetch(),
+        future: fetch(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             if (appointements.isNotEmpty) {

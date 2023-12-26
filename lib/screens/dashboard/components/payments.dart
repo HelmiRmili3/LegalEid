@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:testapp/components/no_data.dart';
-import '../../../components/no_data.dart';
 
 class PaymentsList extends StatefulWidget {
   const PaymentsList({Key? key}) : super(key: key);

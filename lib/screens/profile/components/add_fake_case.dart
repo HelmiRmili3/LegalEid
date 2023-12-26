@@ -49,7 +49,7 @@ class _AddFakeCaseState extends State<AddFakeCase> {
       _formKey.currentState!.reset();
     }
 
-    void _clearFields() {
+    void clearFields() {
       // Clear the fields wen the auth state changes.
       codeTextController.clear();
       amountTextController.clear();
@@ -124,7 +124,7 @@ class _AddFakeCaseState extends State<AddFakeCase> {
                     isLoding = false;
                   });
                   Navigator.pop(context);
-                  _clearFields();
+                  clearFields();
                   dispose();
                 });
               },

@@ -8,17 +8,16 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 12, left: 12),
-      child: Column(children: const [
+    return const Padding(
+      padding: EdgeInsets.only(right: 12, left: 12),
+      child: Column(children: [
         GridSection(),
         TextLabel(
           bgcolor: Color.fromARGB(255, 252, 250, 250),
           text: 'Payments Reports',
         ),
         SizedBox(height: 10),
-       Expanded(child: PaymentsList()),
-        
+        Expanded(child: PaymentsList()),
       ]),
     );
     //return const GridSection();

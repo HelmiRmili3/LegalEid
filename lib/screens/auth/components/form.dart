@@ -8,7 +8,6 @@ import '../../../models/user.dart';
 import '../../../providers/firesotre_helper.dart';
 
 //Importing pages
-import 'rest_password.dart';
 import '../../../enums.dart';
 
 class CustomForm extends StatefulWidget {
