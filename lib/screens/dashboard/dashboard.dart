@@ -9,7 +9,7 @@ import 'components/body.dart';
 class Dashboard extends StatefulWidget {
   static String routeName = "/dashboard";
 
-  const Dashboard({Key? key}) : super(key: key);
+  const Dashboard({super.key});
   @override
   State<Dashboard> createState() => _DashboardState();
 }
@@ -18,17 +18,16 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor:Color.fromARGB(26, 245, 240, 240),
+      //backgroundColor:Colors.blue,
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        centerTitle: true,
         title: const Text(
           'Dashboard',
           style: TextStyle(
             color: Colors.black,
           ),
-          //textAlign: TextAlign.start,
         ),
-        backgroundColor: Colors.transparent,
         elevation: 0.0,
       ),
       body:const Body(),

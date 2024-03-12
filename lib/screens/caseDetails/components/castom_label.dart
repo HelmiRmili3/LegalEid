@@ -6,12 +6,12 @@ class CastomLabel extends StatelessWidget {
   final Color bgcolor;
   final double boxwith;
   const CastomLabel({
-    Key? key,
+    super.key,
     required this.lefttext,
     this.boxwith = 10,
     this.righttext = '',
     this.bgcolor = const Color.fromARGB(255, 252, 251, 251),
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     return Container(

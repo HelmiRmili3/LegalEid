@@ -5,9 +5,9 @@ class CaseDetails extends StatelessWidget {
   static String routeName = "/caseDetails";
   final String id;
   const CaseDetails({
-    Key? key,
+    super.key,
     required this.id,
-}) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +16,7 @@ class CaseDetails extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Case Details'),
+          centerTitle: true,
           bottom: const TabBar(tabs: [
             Tab(
               text: 'Info',

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class CostomField extends StatelessWidget {
   final String text;
   CostomField({
-    Key? key,
+    super.key,
     required this.text,
-  }) : super(key: key);
+  });
   final _emailTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {

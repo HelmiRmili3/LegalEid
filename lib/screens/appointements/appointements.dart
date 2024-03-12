@@ -7,9 +7,7 @@ import '../../components/no_data.dart';
 
 class Appointements extends StatefulWidget {
   static String routeName = "/appointements";
-
-  const Appointements({Key? key}) : super(key: key);
-
+  const Appointements({super.key});
   @override
   State<Appointements> createState() => _AppointementsState();
 }
@@ -35,6 +33,7 @@ class _AppointementsState extends State<Appointements> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        centerTitle: true,
         title: const Text('Appointements'),
       ),
       body: FutureBuilder(
@@ -45,30 +44,36 @@ class _AppointementsState extends State<Appointements> {
               return ListView.builder(
                 itemCount: appointements.length,
                 itemBuilder: ((context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Card(
-                      shadowColor: Colors.blue,
-                      elevation: 5,
-                      child: Container(
-                        color: Colors.blue.withOpacity(0.5),
-                        child: ListTile(
-                          title: Text(
-                            'Date : ${appointements[index]['date']}',
-                            style: const TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          subtitle: Text(
-                              'Time : ${appointements[index]['time']}',
-                              style: const TextStyle(color: Colors.black)),
-                          trailing: IconButton(
-                            onPressed: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => h.AppointementsDetails(
-                                    appointements[index]),
-                              ),
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              h.AppointementsDetails(appointements[index]),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Card(
+                        shadowColor: Colors.blue,
+                        elevation: 5,
+                        child: Container(
+                          color: Colors.blue.withOpacity(0.5),
+                          child: ListTile(
+                            title: Text(
+                              'Date : ${appointements[index]['date']}',
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.bold),
                             ),
-                            icon: const Icon(Icons.arrow_forward),
+                            subtitle: Text(
+                                'Time : ${appointements[index]['time']}',
+                                style: const TextStyle(color: Colors.black)),
+                            trailing: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.arrow_forward),
+                            ),
                           ),
                         ),
                       ),
@@ -77,7 +82,7 @@ class _AppointementsState extends State<Appointements> {
                 }),
               );
             } else {
-              return const  Nodata();
+              return const Nodata();
             }
           } else {
             return const Center(

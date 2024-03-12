@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 
 class GridSection extends StatefulWidget {
-  const GridSection({Key? key}) : super(key: key);
+  const GridSection({super.key});
   @override
   State<GridSection> createState() => _GridSectionState();
 }

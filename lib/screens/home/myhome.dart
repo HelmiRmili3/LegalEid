@@ -7,7 +7,7 @@ import '../profile/porfile.dart';
 class MyHome extends StatefulWidget {
   static String routeName = "/myhome";
 
-  const MyHome({Key? key}) : super(key: key);
+  const MyHome({super.key});
 
   @override
   State<MyHome> createState() => _MyHomeState();
@@ -30,9 +30,9 @@ class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:  _pages[_currentIndex],
+      body: _pages[_currentIndex],
       bottomNavigationBar: SizedBox(
-         height: 50,
+        height: 60,
         width: double.infinity,
         child: BottomNavigationBar(
           onTap: _onItemTap,
@@ -43,10 +43,9 @@ class _MyHomeState extends State<MyHome> {
           selectedFontSize: 12,
           unselectedFontSize: 12,
           showSelectedLabels: true,
-          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold,fontSize: 8),
-          unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
           elevation: 5,
-          items: const <BottomNavigationBarItem> [
+          type: BottomNavigationBarType.fixed,
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.dashboard),
               label: 'Dashboard',

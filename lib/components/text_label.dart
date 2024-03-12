@@ -4,10 +4,10 @@ class TextLabel extends StatelessWidget {
   final Color bgcolor;
   final String text;
   const TextLabel({
-    Key? key,
+    super.key,
     required this.bgcolor,
     required this.text,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     return ClipRRect(

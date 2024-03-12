@@ -5,7 +5,7 @@ import '../../../components/no_data.dart';
 import '../components/my_card.dart';
 
 class Body extends StatefulWidget {
-  const Body({Key? key}) : super(key: key);
+  const Body({super.key});
   @override
   State<Body> createState() => _BodyState();
 }

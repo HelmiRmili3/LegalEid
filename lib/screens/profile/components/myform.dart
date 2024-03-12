@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyForm extends StatelessWidget {
-  const MyForm({Key? key}) : super(key: key);
+  const MyForm({super.key});
 
   @override
   Widget build(BuildContext context) {

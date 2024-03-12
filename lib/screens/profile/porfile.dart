@@ -9,7 +9,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 class Profile extends StatelessWidget {
   static String routeName = "/profile";
 
-  const Profile({Key? key}) : super(key: key);
+  const Profile({super.key});
   final storage = const FlutterSecureStorage();
 
   @override
@@ -17,12 +17,13 @@ class Profile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profile'),
+        centerTitle: true,
         automaticallyImplyLeading: false,
         actions: [
           TextButton(
-            child:const Padding(
-              padding:  EdgeInsets.all(8.0),
-              child:  Text(
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
                 'Logout',
                 style: TextStyle(color: Colors.white),
               ),
@@ -40,8 +41,7 @@ class Profile extends StatelessWidget {
                   Navigator.pop(context);
                   Navigator.pushReplacementNamed(context, '/auth');
                 });
-              }).onError((error, stackTrace) {
-              });
+              }).onError((error, stackTrace) {});
             },
           )
         ],

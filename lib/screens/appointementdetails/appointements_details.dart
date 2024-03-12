@@ -1,30 +1,26 @@
 import 'package:flutter/material.dart';
 
-//import 'package:testapp/models/appointement.dart';
-
 // ignore: must_be_immutable
 class AppointementsDetails extends StatelessWidget {
   Map<String, dynamic> appointement;
   AppointementsDetails(
     this.appointement, {
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
-    // print('///$appointement');
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('Appointement Détails'),
       ),
       body: Column(
         children: [
           const SizedBox(height: 10),
           CostomLabel(
-              lefttext: 'Appointement Date :',
-              righttext: appointement['date']),
+              lefttext: 'Appointement Date :', righttext: appointement['date']),
           CostomLabel(
-              lefttext: 'Appointement Hour :',
-              righttext: appointement['time']),
+              lefttext: 'Appointement Hour :', righttext: appointement['time']),
           const SizedBox(height: 80),
           Row(
             children: [
@@ -35,8 +31,8 @@ class AppointementsDetails extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     height: 30,
                     color: Colors.red,
-                    child:const Text('Details',
-                        style:  TextStyle(
+                    child: const Text('Details',
+                        style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ))),
@@ -50,7 +46,7 @@ class AppointementsDetails extends StatelessWidget {
             decoration: BoxDecoration(border: Border.all()),
             alignment: Alignment.topLeft,
             margin: const EdgeInsets.all(20),
-            child:  Text(appointement['details'], style:const TextStyle()),
+            child: Text(appointement['details'], style: const TextStyle()),
           )
         ],
       ),
@@ -63,10 +59,10 @@ class CostomLabel extends StatelessWidget {
   String lefttext;
   String righttext;
   CostomLabel({
-    Key? key,
+    super.key,
     required this.lefttext,
     required this.righttext,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

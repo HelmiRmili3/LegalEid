@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
 class ResetPassword extends StatelessWidget {
-  ResetPassword({Key? key}) : super(key: key);
+  ResetPassword({super.key});
   final _emailTextController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey();
 
@@ -32,7 +32,7 @@ class ResetPassword extends StatelessWidget {
                     validator: MultiValidator([
                       RequiredValidator(errorText: 'Required*'),
                       EmailValidator(errorText: 'Enter you valide Email')
-                    ]),
+                    ]).call,
                     controller: _emailTextController,
                     decoration: const InputDecoration(
                       focusedBorder: OutlineInputBorder(

@@ -4,18 +4,21 @@ import '../cases/components/body.dart';
 class Cases extends StatelessWidget {
   static String routeName = "/cases";
 
-  const Cases({Key? key}) : super(key: key);
+  const Cases({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text('Cases',style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.transparent,
+        centerTitle: true,
+        title: const Text(
+          'Cases',
+          style: TextStyle(color: Colors.black),
+        ),
         elevation: 0,
       ),
-      body:const Body(),
+      body: const Body(),
     );
   }
 }

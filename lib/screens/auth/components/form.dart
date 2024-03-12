@@ -12,8 +12,8 @@ import '../../../enums.dart';
 
 class CustomForm extends StatefulWidget {
   const CustomForm({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<CustomForm> createState() => _CustomFormState();
@@ -71,7 +71,7 @@ class _CustomFormState extends State<CustomForm> {
               validator: MultiValidator([
                 RequiredValidator(errorText: 'Required*'),
                 EmailValidator(errorText: 'Enter your valide email'),
-              ]),
+              ]).call,
               controller: _emailTextController,
               decoration: const InputDecoration(
                 focusedBorder: OutlineInputBorder(
@@ -101,7 +101,7 @@ class _CustomFormState extends State<CustomForm> {
                   8,
                   errorText: 'Password must be at least 8 digits long',
                 ),
-              ]),
+              ]).call,
               obscureText: _obscure,
               decoration: InputDecoration(
                 border: const OutlineInputBorder(

@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class Section extends StatelessWidget {
   Section(
-      {Key? key,
+      {super.key,
       required this.headercolor,
       required this.title,
-      required this.value})
-      : super(key: key);
+      required this.value});
 
   Color headercolor = Colors.green;
    var title='';

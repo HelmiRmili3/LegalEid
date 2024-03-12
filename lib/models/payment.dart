@@ -1,7 +1,3 @@
-// To parse this JSON data, do
-//
-//     final payment = paymentFromJson(jsonString);
-
 import 'dart:convert';
 
 Payment paymentFromJson(String str) => Payment.fromJson(json.decode(str));

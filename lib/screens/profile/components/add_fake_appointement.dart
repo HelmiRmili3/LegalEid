@@ -5,7 +5,7 @@ import 'package:date_time_picker/date_time_picker.dart';
 import 'package:intl/intl.dart';
 
 class AddFakeAppointement extends StatefulWidget {
-  const AddFakeAppointement({Key? key}) : super(key: key);
+  const AddFakeAppointement({super.key});
 
   @override
   State<AddFakeAppointement> createState() => _AddFakeAppointementState();

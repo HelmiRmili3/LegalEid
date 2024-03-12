@@ -8,12 +8,12 @@ class TextInput extends StatelessWidget {
   TextEditingController textEditingController;
 
   TextInput({
-    Key? key,
+    super.key,
     required this.validator,
     required this.labelText,
     required this.textInputType,
     required this.textEditingController,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

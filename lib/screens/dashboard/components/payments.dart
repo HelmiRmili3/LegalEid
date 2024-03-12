@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:testapp/components/no_data.dart';
 
 class PaymentsList extends StatefulWidget {
-  const PaymentsList({Key? key}) : super(key: key);
+  const PaymentsList({super.key});
   @override
   State<PaymentsList> createState() => _PaymentsListState();
 }
@@ -80,8 +80,8 @@ class CostumTile extends StatelessWidget {
     this.details,
     this.time,
     this.type, {
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

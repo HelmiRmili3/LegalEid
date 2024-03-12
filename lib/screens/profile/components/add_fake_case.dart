@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'text_input.dart';
 
 class AddFakeCase extends StatefulWidget {
-  const AddFakeCase({Key? key}) : super(key: key);
+  const AddFakeCase({super.key});
   @override
   State<AddFakeCase> createState() => _AddFakeCaseState();
 }

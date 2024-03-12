@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:intl/intl.dart';
 
 class AddFakePayment extends StatefulWidget {
-  const AddFakePayment({Key? key}) : super(key: key);
+  const AddFakePayment({super.key});
 
   @override
   State<AddFakePayment> createState() => _AddFakePaymentState();
@@ -38,7 +38,7 @@ class _AddFakePaymentState extends State<AddFakePayment> {
                 setState(() {
                   isLoding = true;
                 });
-                final uid = FirebaseAuth.instance.currentUser!.uid;
+                final uid =  FirebaseAuth.instance.currentUser!.uid;
 
                 await FirebaseFirestore.instance
                     .collection('data')
@@ -55,7 +55,6 @@ class _AddFakePaymentState extends State<AddFakePayment> {
                     isLoding = false;
                   });
                   Navigator.pop(context);
-                  dispose();
                 });
               },
               icon: const Icon(Icons.save))
@@ -98,7 +97,7 @@ class _AddFakePaymentState extends State<AddFakePayment> {
                     ),
                     TextFormField(
                       autovalidateMode: AutovalidateMode.onUserInteraction,
-                      controller: timeTextController,
+                      controller: detailsTextController,
                       decoration: const InputDecoration(
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -120,7 +119,7 @@ class _AddFakePaymentState extends State<AddFakePayment> {
                     ),
                     TextFormField(
                       autovalidateMode: AutovalidateMode.onUserInteraction,
-                      controller: detailsTextController,
+                      controller: timeTextController,
                       decoration: const InputDecoration(
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(

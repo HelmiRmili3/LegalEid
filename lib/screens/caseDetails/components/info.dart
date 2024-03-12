@@ -8,9 +8,9 @@ import '../components/castom_label.dart';
 class Info extends StatelessWidget {
   final String id;
   Info({
-    Key? key,
+    super.key,
     required this.id,
-  }) : super(key: key);
+  });
 
   Map<String, dynamic> cases = {};
   _fetch() async {
